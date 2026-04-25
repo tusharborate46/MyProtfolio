@@ -3,42 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Portfolio</title>
-  <meta name="description" content="Modern portfolio powered by Supabase and admin portal." />
+  <title>Tushar Borate | Portfolio</title>
+  <meta name="description" content="Personal portfolio powered by GitHub profile data." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-gradient">
-  <header class="topbar container">
+<body>
+  <header class="hero container">
+    <img id="avatar" class="avatar" alt="GitHub profile avatar" />
     <div>
-      <p class="eyebrow">Portfolio Template v2</p>
-      <h1 id="name">Loading...</h1>
-      <p id="headline" class="headline">Please wait while profile details are loaded.</p>
+      <p class="eyebrow">GitHub Powered Portfolio</p>
+      <h1 id="name">Loading profile...</h1>
+      <p id="bio" class="muted">Fetching latest data from GitHub API.</p>
+      <div class="hero-actions">
+        <a id="githubLink" class="btn" href="#" target="_blank" rel="noreferrer">GitHub Profile</a>
+        <a id="blogLink" class="btn secondary" href="#" target="_blank" rel="noreferrer">Website / Blog</a>
+      </div>
+      <ul class="meta" id="meta"></ul>
     </div>
-    <a href="admin.html" class="btn">Admin Portal</a>
   </header>
 
-  <main class="container layout">
+  <main class="container grid">
     <section class="card">
       <h2>About</h2>
-      <p id="about">Fetching your profile summary...</p>
-      <ul id="contacts" class="contact-list"></ul>
+      <p id="aboutText">Loading...</p>
     </section>
 
     <section class="card">
-      <h2>Skills</h2>
-      <div id="skills" class="tag-grid"></div>
+      <h2>Top Languages</h2>
+      <div id="languages" class="tags"></div>
     </section>
 
     <section class="card wide">
-      <h2>Featured Projects</h2>
-      <div id="projects" class="project-grid"></div>
+      <div class="section-head">
+        <h2>Featured Repositories</h2>
+        <a id="repoMore" href="#" target="_blank" rel="noreferrer">View all</a>
+      </div>
+      <div id="repos" class="repo-grid"></div>
     </section>
   </main>
 
-  <footer class="container footer-note">Data source: Supabase + Express API</footer>
+  <footer class="container footer">
+    <p>Built for <strong>tusharborate46</strong> • Data source: GitHub public API.</p>
+  </footer>
 
   <script src="frontend.js"></script>
 </body>
