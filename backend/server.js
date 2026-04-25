@@ -26,7 +26,7 @@ function requireAdmin(req, res, next) {
 
 async function fetchPortfolio() {
   const [{ data: profile, error: profileError }, { data: skills, error: skillsError }, { data: projects, error: projectsError }, { data: contacts, error: contactsError }] = await Promise.all([
-    supabase.from('profile').select('*').eq('id', 1).single(),
+    supabase.from('profile').select('*').eq('id', 1).maybeSingle(),
     supabase.from('skills').select('*').order('id', { ascending: true }),
     supabase.from('projects').select('*').order('id', { ascending: false }),
     supabase.from('contacts').select('*').order('id', { ascending: true })
