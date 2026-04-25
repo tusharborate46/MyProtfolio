@@ -1,39 +1,19 @@
-# Modern Portfolio + Admin + Supabase
+# GitHub Dynamic Portfolio Template
 
-## What changed
-- New website theme/template with separate frontend files:
-  - `index.html`
-  - `styles.css`
-  - `frontend.js`
-- New admin portal:
-  - `admin.html`
-  - `admin.js`
-- New backend API:
-  - `backend/server.js`
-- Supabase database schema:
-  - `supabase/schema.sql`
+A clean developer portfolio template inspired by modern GitHub portfolio layouts.
 
-## 1) Setup Supabase database
-1. Create a new project in Supabase.
-2. Open SQL Editor and run `supabase/schema.sql`.
-3. Copy your project URL and service role key.
+## Features
+- Auto-loads profile details from GitHub username `tusharborate46`.
+- Shows avatar, bio, followers, public repo count, and location.
+- Builds top-language chips from your repositories.
+- Shows featured repositories sorted by stars and forks.
+- Pure static frontend (`index.html`, `styles.css`, `frontend.js`) — no backend required.
 
-## 2) Setup backend
-```bash
-cd backend
-cp .env.example .env
-# fill SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ADMIN_PORTAL_KEY
-npm install
-npm start
-```
-
-## 3) Run frontend
-From repo root, serve static files:
+## Run locally
 ```bash
 python3 -m http.server 5500
 ```
-Open:
-- Portfolio: `http://localhost:5500/index.html`
-- Admin: `http://localhost:5500/admin.html`
+Open: `http://localhost:5500`
 
-The frontend connects to backend at `http://localhost:4000/api`.
+## Customize
+Update `USERNAME` in `frontend.js` to reuse for another account.
