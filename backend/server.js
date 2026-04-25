@@ -9,7 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!supabaseUrl || !supabaseServiceRoleKey) {
+  throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in environment variables');
+}
+const supabase = createClient(supabaseUrl, supabaseServiceRoleKey);
 const adminKey = process.env.ADMIN_PORTAL_KEY;
 
 function requireAdmin(req, res, next) {
@@ -20,12 +25,17 @@ function requireAdmin(req, res, next) {
 }
 
 async function fetchPortfolio() {
-  const [{ data: profile }, { data: skills }, { data: projects }, { data: contacts }] = await Promise.all([
-    supabase.from('profile').select('*').eq('id', 1).single(),
+  const [{ data: profile, error: profileError }, { data: skills, error: skillsError }, { data: projects, error: projectsError }, { data: contacts, error: contactsError }] = await Promise.all([
+    supabase.from('profile').select('*').eq('id', 1).maybeSingle(),
     supabase.from('skills').select('*').order('id', { ascending: true }),
     supabase.from('projects').select('*').order('id', { ascending: false }),
     supabase.from('contacts').select('*').order('id', { ascending: true })
   ]);
+
+  if (profileError) throw profileError;
+  if (skillsError) throw skillsError;
+  if (projectsError) throw projectsError;
+  if (contactsError) throw contactsError;
 
   return { profile, skills, projects, contacts };
 }
