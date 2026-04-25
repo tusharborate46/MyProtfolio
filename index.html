@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Tushar Borate — Computer Engineer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,300&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tushar Portfolio</title>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- BLOBS -->
-<div class="blobs">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-  <div class="blob b3"></div>
-</div>
-
-<div id="prog"></div>
-
 <!-- SIDEBAR -->
 <aside class="sidebar">
-  <div class="s-name">Tushar Borate</div>
-  <div class="s-role">Computer Engineering</div>
-  <div class="s-status"><span class="s-dot"></span> Open to work</div>
+  <h2 class="logo">Tushar</h2>
 
-  <nav id="nav">
-    <button class="tab active" data-panel="home"><span class="t-dot"></span> Home</button>
-    <button class="tab" data-panel="projects"><span class="t-dot"></span> Projects</button>
-    <button class="tab" data-panel="skills"><span class="t-dot"></span> Skills</button>
-    <button class="tab" data-panel="achievements"><span class="t-dot"></span> Achievements</button>
-    <button class="tab" data-panel="contact"><span class="t-dot"></span> Contact</button>
+  <nav>
+    <button class="tab active" data-panel="home">Home</button>
+    <button class="tab" data-panel="projects">Projects</button>
+    <button class="tab" data-panel="skills">Skills</button>
+    <button class="tab" data-panel="resume">Resume</button>
+    <button class="tab" data-panel="contact">Contact</button>
   </nav>
-
-  <div class="sidebar-bottom">
-    <div class="s-links">
-      <a class="s-link" href="https://github.com/tusharborate46" target="_blank">GitHub</a>
-      <a class="s-link" href="https://linkedin.com/in/tushar-borate-ba7a792b6" target="_blank">LinkedIn</a>
-      <a class="s-link" href="mailto:boratetushar46@gmail.com">Email</a>
-    </div>
-
-    <hr class="s-sep">
-
-    <button class="theme-toggle" id="themeBtn">
-      <span id="themeIcon">☀️</span>
-      <span id="themeLabel">Light mode</span>
-    </button>
-  </div>
 </aside>
 
 <!-- MAIN -->
-<main id="main">
+<main>
 
-  <section class="panel active" id="panel-home">
-    <h1 class="title">Tushar Borate</h1>
-    <p class="subtitle">Computer Engineering Student • Full Stack Developer</p>
-  </section>
+<!-- HOME -->
+<section id="panel-home" class="panel active">
+  <h1>Hi 👋 I'm Tushar</h1>
+  <p>Full Stack Developer</p>
+</section>
 
-  <section class="panel" id="panel-projects">
-    <h2 class="title">Projects</h2>
-    <p class="body">Your projects section</p>
-  </section>
+<!-- PROJECTS -->
+<section id="panel-projects" class="panel">
+  <h2>Projects</h2>
 
-  <section class="panel" id="panel-skills">
-    <h2 class="title">Skills</h2>
-    <p class="body">Your skills section</p>
-  </section>
+  <div class="grid">
 
-  <section class="panel" id="panel-achievements">
-    <h2 class="title">Achievements</h2>
-  </section>
+    <!-- 🔥 ADD NEW PROJECT LIKE THIS -->
+    <div class="card">
+      <h3>Wall of Fame</h3>
+      <p>Student achievement platform</p>
+      <span class="stack">HTML • CSS • JS • Node</span>
+    </div>
 
-  <section class="panel" id="panel-contact">
-    <h2 class="title">Contact</h2>
-  </section>
+    <div class="card">
+      <h3>Gesture Device</h3>
+      <p>IoT hand gesture system</p>
+      <span class="stack">Sensors • Arduino</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="panel-skills" class="panel">
+  <h2>Skills</h2>
+
+  <div class="grid small">
+
+    <!-- 🔥 ADD SKILL LIKE THIS -->
+    <div class="tag">HTML</div>
+    <div class="tag">CSS</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">React</div>
+    <div class="tag">Node.js</div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="panel-contact" class="panel">
+  <h2>Contact</h2>
+  <p>Email: boratetushar46@gmail.com</p>
+</section>
 
 </main>
 
