@@ -1,54 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tushar Borate | Portfolio</title>
-  <meta name="description" content="Personal portfolio powered by GitHub profile data." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tushar Borate — Computer Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="hero container">
-    <img id="avatar" class="avatar" alt="GitHub profile avatar" />
-    <div>
-      <p class="eyebrow">GitHub Powered Portfolio</p>
-      <h1 id="name">Loading profile...</h1>
-      <p id="bio" class="muted">Fetching latest data from GitHub API.</p>
-      <div class="hero-actions">
-        <a id="githubLink" class="btn" href="#" target="_blank" rel="noreferrer">GitHub Profile</a>
-        <a id="blogLink" class="btn secondary" href="#" target="_blank" rel="noreferrer">Website / Blog</a>
-      </div>
-      <ul class="meta" id="meta"></ul>
+
+<!-- BLOBS -->
+<div class="blobs">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+
+<div id="prog"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="s-name">Tushar Borate</div>
+  <div class="s-role">Computer Engineering</div>
+  <div class="s-status"><span class="s-dot"></span> Open to work</div>
+
+  <nav id="nav">
+    <button class="tab active" data-panel="home"><span class="t-dot"></span> Home</button>
+    <button class="tab" data-panel="projects"><span class="t-dot"></span> Projects</button>
+    <button class="tab" data-panel="skills"><span class="t-dot"></span> Skills</button>
+    <button class="tab" data-panel="achievements"><span class="t-dot"></span> Achievements</button>
+    <button class="tab" data-panel="contact"><span class="t-dot"></span> Contact</button>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div class="s-links">
+      <a class="s-link" href="https://github.com/tusharborate46" target="_blank">GitHub</a>
+      <a class="s-link" href="https://linkedin.com/in/tushar-borate-ba7a792b6" target="_blank">LinkedIn</a>
+      <a class="s-link" href="mailto:boratetushar46@gmail.com">Email</a>
     </div>
-  </header>
 
-  <main class="container grid">
-    <section class="card">
-      <h2>About</h2>
-      <p id="aboutText">Loading...</p>
-    </section>
+    <hr class="s-sep">
 
-    <section class="card">
-      <h2>Top Languages</h2>
-      <div id="languages" class="tags"></div>
-    </section>
+    <button class="theme-toggle" id="themeBtn">
+      <span id="themeIcon">☀️</span>
+      <span id="themeLabel">Light mode</span>
+    </button>
+  </div>
+</aside>
 
-    <section class="card wide">
-      <div class="section-head">
-        <h2>Featured Repositories</h2>
-        <a id="repoMore" href="#" target="_blank" rel="noreferrer">View all</a>
-      </div>
-      <div id="repos" class="repo-grid"></div>
-    </section>
-  </main>
+<!-- MAIN -->
+<main id="main">
 
-  <footer class="container footer">
-    <p>Built for <strong>tusharborate46</strong> • Data source: GitHub public API.</p>
-  </footer>
+  <section class="panel active" id="panel-home">
+    <h1 class="title">Tushar Borate</h1>
+    <p class="subtitle">Computer Engineering Student • Full Stack Developer</p>
+  </section>
 
-  <script src="frontend.js"></script>
+  <section class="panel" id="panel-projects">
+    <h2 class="title">Projects</h2>
+    <p class="body">Your projects section</p>
+  </section>
+
+  <section class="panel" id="panel-skills">
+    <h2 class="title">Skills</h2>
+    <p class="body">Your skills section</p>
+  </section>
+
+  <section class="panel" id="panel-achievements">
+    <h2 class="title">Achievements</h2>
+  </section>
+
+  <section class="panel" id="panel-contact">
+    <h2 class="title">Contact</h2>
+  </section>
+
+</main>
+
+<script src="frontend.js"></script>
 </body>
 </html>
