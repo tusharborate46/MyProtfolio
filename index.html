@@ -3,42 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Portfolio</title>
-  <meta name="description" content="Modern portfolio powered by Supabase and admin portal." />
+  <title>Tushar Borate — Portfolio</title>
+  <meta name="description" content="Minimal portfolio inspired by Home-Portfolio style with live GitHub data." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-gradient">
-  <header class="topbar container">
-    <div>
-      <p class="eyebrow">Portfolio Template v2</p>
-      <h1 id="name">Loading...</h1>
-      <p id="headline" class="headline">Please wait while profile details are loaded.</p>
-    </div>
-    <a href="admin.html" class="btn">Admin Portal</a>
-  </header>
+<body>
+  <div class="bg-glow"></div>
 
-  <main class="container layout">
-    <section class="card">
-      <h2>About</h2>
-      <p id="about">Fetching your profile summary...</p>
-      <ul id="contacts" class="contact-list"></ul>
+  <aside class="sidebar">
+    <h1 class="brand" id="brandName">Tushar Borate</h1>
+    <nav class="nav">
+      <div class="indicator"></div>
+      <button class="tab active" data-target="profile">Profile</button>
+      <button class="tab" data-target="projects">Projects</button>
+      <button class="tab" data-target="skills">Skills</button>
+      <button class="tab" data-target="contact">Contact</button>
+    </nav>
+    <p class="footer">GitHub powered portfolio</p>
+  </aside>
+
+  <main class="main">
+    <section id="profile" class="section active wide">
+      <p class="microcopy">Developer Portfolio</p>
+      <h2 class="hero" id="name">Loading profile...</h2>
+      <p id="bio">Fetching data from GitHub...</p>
+      <div class="divider"></div>
+      <div class="stats" id="stats"></div>
+      <div class="divider shift-right"></div>
+      <p id="about">This section is generated from your public GitHub profile details.</p>
     </section>
 
-    <section class="card">
-      <h2>Skills</h2>
-      <div id="skills" class="tag-grid"></div>
+    <section id="projects" class="section wide">
+      <h2 class="section-title">Selected work</h2>
+      <p class="microcopy">Top repositories from your public GitHub profile.</p>
+      <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
-    <section class="card wide">
-      <h2>Featured Projects</h2>
-      <div id="projects" class="project-grid"></div>
+    <section id="skills" class="section narrow">
+      <h2 class="section-title">Toolkit</h2>
+      <p class="microcopy">Derived from your repository languages.</p>
+      <div class="skill-groups">
+        <div>
+          <h3 class="skill-group-title">Top Languages</h3>
+          <div class="tags" id="languageTags"></div>
+        </div>
+        <div>
+          <h3 class="skill-group-title">Profile Signals</h3>
+          <div class="tags" id="signalTags"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section narrow">
+      <h2 class="section-title">Get in touch</h2>
+      <p class="microcopy">Open to collaboration and opportunities.</p>
+      <div class="contact" id="contactLinks"></div>
     </section>
   </main>
-
-  <footer class="container footer-note">Data source: Supabase + Express API</footer>
 
   <script src="frontend.js"></script>
 </body>
