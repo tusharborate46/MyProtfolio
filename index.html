@@ -1,83 +1,220 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tushar Portfolio</title>
-
+<title>Tushar Borate — B.Tech Student</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500&family=Jost+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-  <h2 class="logo">Tushar</h2>
-
-  <nav>
-    <button class="tab active" data-panel="home">Home</button>
-    <button class="tab" data-panel="projects">Projects</button>
-    <button class="tab" data-panel="skills">Skills</button>
-    <button class="tab" data-panel="resume">Resume</button>
-    <button class="tab" data-panel="contact">Contact</button>
-  </nav>
-</aside>
-
-<!-- MAIN -->
-<main>
+<nav>
+  <a href="#home" class="nav-logo">Tushar Borate</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 <!-- HOME -->
-<section id="panel-home" class="panel active">
-  <h1>Hi 👋 I'm Tushar</h1>
-  <p>Full Stack Developer</p>
-</section>
-
-<!-- PROJECTS -->
-<section id="panel-projects" class="panel">
-  <h2>Projects</h2>
-
-  <div class="grid">
-
-    <!-- 🔥 ADD NEW PROJECT LIKE THIS -->
-    <div class="card">
-      <h3>Wall of Fame</h3>
-      <p>Student achievement platform</p>
-      <span class="stack">HTML • CSS • JS • Node</span>
+<section id="home">
+  <div class="hero-left">
+    <div class="hero-tag">B.Tech Student · MMCOE Pune</div>
+    <h1 class="hero-name">Hello, I'm<br><em>Tushar</em><br>Borate.</h1>
+    <p class="hero-desc">A passionate engineering student exploring technology, building projects, and growing every day at Marathwada Mitra Mandal's College of Engineering, Pune.</p>
+    <div>
+      <a href="#about" class="hero-cta">About Me</a>
+      <a href="#blog" class="hero-cta-ghost">Read My Blog</a>
     </div>
-
-    <div class="card">
-      <h3>Gesture Device</h3>
-      <p>IoT hand gesture system</p>
-      <span class="stack">Sensors • Arduino</span>
+  </div>
+  <div class="hero-right">
+  <div class="avatar-block">
+    <img src="myprofile.jpeg" alt="Tushar Borate" class="avatar-photo">
+    <span class="avatar-label">TUSHAR BORATE · MMCOE · PUNE</span>
+  </div>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-val">B.Tech</div>
+        <div class="stat-lbl">Degree Pursuing</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">MMCOE</div>
+        <div class="stat-lbl">Pune, Maharashtra</div>
+      </div>
     </div>
-
   </div>
 </section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">01 — About Me</div>
+  <div>
+    <h2 class="section-heading">Education,<br>Skills &amp;<br>Interests.</h2>
+    <p class="section-body">I am Tushar Borate, a B.Tech student at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune. I am passionate about technology and committed to learning, building, and growing as an engineer. I enjoy working on real-world problems and turning ideas into solutions through code.</p>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-key">Degree</div>
+        <div class="info-val">Bachelor of Technology (B.Tech)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-key">College</div>
+        <div class="info-val">MMCOE, Pune</div>
+      </div>
+      <div class="info-item">
+        <div class="info-key">Location</div>
+        <div class="info-val">Pune, Maharashtra, India</div>
+      </div>
+      <div class="info-item">
+        <div class="info-key">Status</div>
+        <div class="info-val">Currently Enrolled</div>
+      </div>
+    </div>
+
+    <p class="section-body">My interests span across software development, problem-solving, and staying up to date with the latest trends in technology. Outside academics, I enjoy collaborative projects and exploring new tools and frameworks.</p>
+  </div>
+</section>
+
+<hr class="divider">
 
 <!-- SKILLS -->
-<section id="panel-skills" class="panel">
-  <h2>Skills</h2>
+<div style="background: var(--paper-2); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);">
+  <div class="skills-inner">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <div class="section-label" style="margin-bottom:0.75rem;">02 — Skills</div>
+        <h2 class="section-heading" style="margin-bottom:0;">What I<br>know &amp; use.</h2>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <div class="skill-cat-icon">💻</div>
+        <div class="skill-cat-name">Programming Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-icon">🌐</div>
+        <div class="skill-cat-name">Web Development</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">WordPress</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-icon">🛠️</div>
+        <div class="skill-cat-name">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-icon">📚</div>
+        <div class="skill-cat-name">Core Subjects</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">DBMS</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Networking</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-icon">🤝</div>
+        <div class="skill-cat-name">Soft Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Teamwork</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-icon">🎯</div>
+        <div class="skill-cat-name">Interests</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Open Source</span>
+          <span class="skill-tag">AI / ML</span>
+          <span class="skill-tag">Hackathons</span>
+          <span class="skill-tag">Tech Blogs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="grid small">
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-label">03 — Blog</div>
+  <div>
+    <h2 class="section-heading">My<br>Thoughts &amp;<br>Projects.</h2>
+    <p class="section-body">Sharing what I learn, build, and experience as a B.Tech student at MMCOE.</p>
 
-    <!-- 🔥 ADD SKILL LIKE THIS -->
-    <div class="tag">HTML</div>
-    <div class="tag">CSS</div>
-    <div class="tag">JavaScript</div>
-    <div class="tag">React</div>
-    <div class="tag">Node.js</div>
-
+    <div class="posts-list">
+      <div class="post-item">
+        <div class="post-num">01</div>
+        <div>
+          <div class="post-cat">Achievement</div>
+          <div class="post-title">My First Hackathon Experience</div>
+          <p class="post-excerpt">Participating in my first hackathon was a turning point. In 24 hours, our team built a prototype that solved a real campus problem — and I learned more than an entire semester of classes.</p>
+          <div class="post-date">April 2025</div>
+        </div>
+      </div>
+      <div class="post-item">
+        <div class="post-num">02</div>
+        <div>
+          <div class="post-cat">Project</div>
+          <div class="post-title">Building My First Web App with HTML, CSS & JS</div>
+          <p class="post-excerpt">A walkthrough of how I built a simple task manager web app from scratch — what I used, the bugs I hit, and what I'd do differently now. A great learning experience for any beginner.</p>
+          <div class="post-date">March 2025</div>
+        </div>
+      </div>
+      <div class="post-item">
+        <div class="post-num">03</div>
+        <div>
+          <div class="post-cat">Experience</div>
+          <div class="post-title">What B.Tech at MMCOE Has Taught Me So Far</div>
+          <p class="post-excerpt">Reflecting on my journey at Marathwada Mitra Mandal's College of Engineering — the labs, the friendships, the late-night study sessions, and why I chose engineering in the first place.</p>
+          <div class="post-date">January 2025</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<hr class="divider">
+
 <!-- CONTACT -->
-<section id="panel-contact" class="panel">
-  <h2>Contact</h2>
-  <p>Email: boratetushar46@gmail.com</p>
+<section id="contact">
+  <div class="section-label" style="margin-bottom:1rem;">04 — Contact</div>
+  <h2 class="contact-big">Let's connect<br>&amp; collaborate.</h2>
+  <p class="contact-sub">Open to internships, projects, collaborations, and conversations about tech.</p>
+  <a href="mailto:tushar.borate@example.com" class="contact-email">tushar.borate@example.com</a>
+  <div class="social-row">
+    <a href="#" class="social-link">LinkedIn</a>
+    <a href="#" class="social-link">GitHub</a>
+    <a href="#" class="social-link">Twitter</a>
+  </div>
 </section>
 
-</main>
+<footer>
+  <span>© 2025 Tushar Borate</span>
+  <span>B.Tech · MMCOE Pune</span>
+  <span>Built with WordPress</span>
+</footer>
 
-<script src="frontend.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
