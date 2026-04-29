@@ -234,7 +234,7 @@ section {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.12em;
-  color: var(--ink-xlight);
+  color: black;
 }
 .avatar-photo {
   width: 100%;
@@ -242,6 +242,7 @@ section {
   object-fit: cover;
   object-position: center top;
   display: block;
+  border: solid black 2px;
 }
 .stat-row {
   display: grid;
