@@ -3,39 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tushar Borate — B.Tech Student</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500&family=Jost+Mono&display=swap" rel="stylesheet">
+<title>Tushar Borate — B.Tech Student & Developer</title>
+<meta name="description" content="Tushar Borate — B.Tech student at MMCOE Pune, passionate about technology, software development and building real-world solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Space+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="#home" class="nav-logo">Tushar Borate</a>
+<!-- Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Background Orbs -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">Tushar<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#home" id="nav-home">Home</a></li>
+    <li><a href="#about" id="nav-about">About</a></li>
+    <li><a href="#skills" id="nav-skills">Skills</a></li>
+    <li><a href="#blog" id="nav-blog">Projects</a></li>
+    <li><a href="#contact" class="nav-cta" id="nav-contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HOME -->
 <section id="home">
   <div class="hero-left">
-    <div class="hero-tag">B.Tech Student · MMCOE Pune</div>
-    <h1 class="hero-name">Hello, I'm<br><em>Tushar</em><br>Borate.</h1>
-    <p class="hero-desc">A passionate engineering student exploring technology, building projects, and growing every day at Marathwada Mitra Mandal's College of Engineering, Pune.</p>
-    <div>
-      <a href="#about" class="hero-cta">About Me</a>
-      <a href="#blog" class="hero-cta-ghost">Read My Blog</a>
+    <div class="hero-badge">B.Tech Student · MMCOE Pune</div>
+    <h1 class="hero-name">
+      Hello, I'm<br>
+      <span class="line-2">Tushar Borate.</span>
+    </h1>
+    <p class="hero-desc">
+      A passionate engineering student exploring technology, building real-world projects, and growing every day at Marathwada Mitra Mandal's College of Engineering, Pune.
+    </p>
+    <div class="hero-actions">
+      <a href="#about" class="btn-primary" id="hero-btn-about">
+        About Me
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#blog" class="btn-secondary" id="hero-btn-projects">
+        View Projects
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
     </div>
   </div>
+
   <div class="hero-right">
-  <div class="avatar-block">
-    <img src="myprofile.jpeg" alt="Tushar Borate" class="avatar-photo">
-    <span class="avatar-label">TUSHAR BORATE · MMCOE · PUNE</span>
-  </div>
-    <div class="stat-row">
+    <div class="avatar-card">
+      <img src="myprofile.jpeg" alt="Tushar Borate">
+      <div class="avatar-glow"></div>
+      <span class="avatar-card-label">Tushar Borate · MMCOE · Pune</span>
+    </div>
+    <div class="stats-row">
       <div class="stat-card">
         <div class="stat-val">B.Tech</div>
         <div class="stat-lbl">Degree Pursuing</div>
@@ -46,55 +72,66 @@
       </div>
     </div>
   </div>
-</section>
 
-<hr class="divider">
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">01 — About Me</div>
-  <div>
-    <h2 class="section-heading">Education,<br>Skills &amp;<br>Interests.</h2>
-    <p class="section-body">I am Tushar Borate, a B.Tech student at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune. I am passionate about technology and committed to learning, building, and growing as an engineer. I enjoy working on real-world problems and turning ideas into solutions through code.</p>
-
-    <div class="info-grid">
-      <div class="info-item">
-        <div class="info-key">Degree</div>
-        <div class="info-val">Bachelor of Technology (B.Tech)</div>
-      </div>
-      <div class="info-item">
-        <div class="info-key">College</div>
-        <div class="info-val">MMCOE, Pune</div>
-      </div>
-      <div class="info-item">
-        <div class="info-key">Location</div>
-        <div class="info-val">Pune, Maharashtra, India</div>
-      </div>
-      <div class="info-item">
-        <div class="info-key">Status</div>
-        <div class="info-val">Currently Enrolled</div>
-      </div>
-    </div>
-
-    <p class="section-body">My interests span across software development, problem-solving, and staying up to date with the latest trends in technology. Outside academics, I enjoy collaborative projects and exploring new tools and frameworks.</p>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll
   </div>
 </section>
 
-<hr class="divider">
+<div class="divider-line"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-sticky reveal">
+      <div class="section-label">01 — About Me</div>
+      <h2 class="section-heading">Education,<br>Skills &amp;<br><em>Interests.</em></h2>
+    </div>
+    <div>
+      <p class="about-body reveal reveal-delay-1">
+        I am Tushar Borate, a B.Tech student at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune. I am passionate about technology and committed to learning, building, and growing as an engineer. I enjoy working on real-world problems and turning ideas into solutions through code.
+      </p>
+
+      <div class="info-grid reveal reveal-delay-2">
+        <div class="info-item">
+          <div class="info-key">Degree</div>
+          <div class="info-val">Bachelor of Technology</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">College</div>
+          <div class="info-val">MMCOE, Pune</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Location</div>
+          <div class="info-val">Pune, Maharashtra</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Status</div>
+          <div class="info-val">Currently Enrolled</div>
+        </div>
+      </div>
+
+      <p class="about-body reveal reveal-delay-3">
+        My interests span across software development, problem-solving, and staying up to date with the latest trends in technology. Outside academics, I enjoy collaborative projects and exploring new tools and frameworks.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-line"></div>
 
 <!-- SKILLS -->
-<div style="background: var(--paper-2); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);">
-  <div class="skills-inner">
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
-      <div>
-        <div class="section-label" style="margin-bottom:0.75rem;">02 — Skills</div>
-        <h2 class="section-heading" style="margin-bottom:0;">What I<br>know &amp; use.</h2>
-      </div>
+<section id="skills">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">02 — Skills</div>
+      <h2 class="section-heading">What I<br>know &amp; <em>use.</em></h2>
     </div>
     <div class="skills-grid">
-      <div class="skill-cat">
-        <div class="skill-cat-icon">💻</div>
-        <div class="skill-cat-name">Programming Languages</div>
+      <div class="skill-card reveal reveal-delay-1">
+        <span class="skill-icon">💻</span>
+        <div class="skill-name">Programming Languages</div>
         <div class="skill-tags">
           <span class="skill-tag">C</span>
           <span class="skill-tag">C++</span>
@@ -102,9 +139,9 @@
           <span class="skill-tag">Java</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-icon">🌐</div>
-        <div class="skill-cat-name">Web Development</div>
+      <div class="skill-card reveal reveal-delay-2">
+        <span class="skill-icon">🌐</span>
+        <div class="skill-name">Web Development</div>
         <div class="skill-tags">
           <span class="skill-tag">HTML</span>
           <span class="skill-tag">CSS</span>
@@ -112,9 +149,9 @@
           <span class="skill-tag">WordPress</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-icon">🛠️</div>
-        <div class="skill-cat-name">Tools & Platforms</div>
+      <div class="skill-card reveal reveal-delay-3">
+        <span class="skill-icon">🛠️</span>
+        <div class="skill-name">Tools &amp; Platforms</div>
         <div class="skill-tags">
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
@@ -122,9 +159,9 @@
           <span class="skill-tag">Linux</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-icon">📚</div>
-        <div class="skill-cat-name">Core Subjects</div>
+      <div class="skill-card reveal reveal-delay-1">
+        <span class="skill-icon">📚</span>
+        <div class="skill-name">Core Subjects</div>
         <div class="skill-tags">
           <span class="skill-tag">Data Structures</span>
           <span class="skill-tag">DBMS</span>
@@ -133,18 +170,18 @@
           <span class="skill-tag">OS</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-icon">🤝</div>
-        <div class="skill-cat-name">Soft Skills</div>
+      <div class="skill-card reveal reveal-delay-2">
+        <span class="skill-icon">🤝</span>
+        <div class="skill-name">Soft Skills</div>
         <div class="skill-tags">
           <span class="skill-tag">Teamwork</span>
           <span class="skill-tag">Communication</span>
           <span class="skill-tag">Problem Solving</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-icon">🎯</div>
-        <div class="skill-cat-name">Interests</div>
+      <div class="skill-card reveal reveal-delay-3">
+        <span class="skill-icon">🎯</span>
+        <div class="skill-name">Interests</div>
         <div class="skill-tags">
           <span class="skill-tag">Open Source</span>
           <span class="skill-tag">AI / ML</span>
@@ -154,66 +191,114 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- BLOG -->
+<div class="divider-line"></div>
+
+<!-- PROJECTS / BLOG -->
 <section id="blog">
-  <div class="section-label">03 — Blog</div>
-  <div>
-    <h2 class="section-heading">My<br>Thoughts &amp;<br>Projects.</h2>
-    <p class="section-body">Sharing what I learn, build, and experience as a B.Tech student at MMCOE.</p>
+  <div class="section-wrap">
+    <div class="blog-sticky reveal">
+      <div class="section-label">03 — Projects</div>
+      <h2 class="section-heading">My<br><em>Projects.</em></h2>
+      <p class="section-sub">Sharing what I learn, build, and experience as a B.Tech student at MMCOE.</p>
+    </div>
 
     <div class="posts-list">
-      <div class="post-item">
-        <div class="post-num">01</div>
-        <div>
-          <div class="post-cat">Achievement</div>
-          <div class="post-title">My First Hackathon Experience</div>
-          <p class="post-excerpt">Participating in my first hackathon was a turning point. In 24 hours, our team built a prototype that solved a real campus problem — and I learned more than an entire semester of classes.</p>
-          <div class="post-date">April 2025</div>
-        </div>
-      </div>
-      <div class="post-item">
-        <div class="post-num">02</div>
-        <div>
-          <div class="post-cat">Project</div>
-          <div class="post-title">Building My First Web App with HTML, CSS & JS</div>
-          <p class="post-excerpt">A walkthrough of how I built a simple task manager web app from scratch — what I used, the bugs I hit, and what I'd do differently now. A great learning experience for any beginner.</p>
-          <div class="post-date">March 2025</div>
-        </div>
-      </div>
-      <div class="post-item">
-        <div class="post-num">03</div>
-        <div>
-          <div class="post-cat">Experience</div>
-          <div class="post-title">What B.Tech at MMCOE Has Taught Me So Far</div>
-          <p class="post-excerpt">Reflecting on my journey at Marathwada Mitra Mandal's College of Engineering — the labs, the friendships, the late-night study sessions, and why I chose engineering in the first place.</p>
-          <div class="post-date">January 2025</div>
-        </div>
-      </div>
+      <div class="post-item reveal">
+         <div class="post-num">01</div>
+    <div>
+      <div class="post-cat">Web Development</div>
+      <div class="post-title">Student Achievement Wall of Fame</div>
+      <p class="post-excerpt">
+        A web portal to manage, display, and showcase student achievements in an organized and interactive way.
+      </p>
+      <div class="post-date">Node.js • MySQL • HTML/CSS/JS</div>
     </div>
+  </div>
+
+  <div class="post-item">
+    <div class="post-num">02</div>
+    <div>
+      <div class="post-cat">IoT Project</div>
+      <div class="post-title">Gesture Recognition Device</div>
+      <p class="post-excerpt">
+        An IoT device that detects and interprets real-time hand gestures using sensors and a microcontroller.
+      </p>
+      <div class="post-date">Sensors • Microcontroller • Embedded C</div>
+    </div>
+  </div>
+
+  <div class="post-item">
+    <div class="post-num">03</div>
+    <div>
+      <div class="post-cat">AI / Web Application</div>
+      <div class="post-title">WFH-WatchFace</div>
+      <p class="post-excerpt">
+        A privacy-first Work From Home employee monitoring system using local face recognition.
+      </p>
+      <div class="post-date">HTML • CSS • JavaScript</div>
+    </div>
+  </div>
+
+  <div class="post-item">
+    <div class="post-num">04</div>
+    <div>
+      <div class="post-cat">Networking Project</div>
+      <div class="post-title">Resilient Offline Mesh Communication Protocol</div>
+      <p class="post-excerpt">
+        A BLE-based offline mesh network that securely relays messages between nearby Android devices until internet becomes available.
+      </p>
+      <div class="post-date">HTML • Java • Kotlin</div>
+    </div>
+  </div>
+
+  <div class="post-item">
+    <div class="post-num">05</div>
+    <div>
+      <div class="post-cat">DBMS Project</div>
+      <div class="post-title">Anki Clone</div>
+      <p class="post-excerpt">
+        An Anki-inspired flashcard learning application that helps users create, manage, and study flashcards.
+      </p>
+      <div class="post-date">HTML • CSS • Java • JavaScript</div>
+    </div>
+  </div>
   </div>
 </section>
 
-<hr class="divider">
+<div class="divider-line"></div>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label" style="margin-bottom:1rem;">04 — Contact</div>
-  <h2 class="contact-big">Let's connect<br>&amp; collaborate.</h2>
-  <p class="contact-sub">Open to internships, projects, collaborations, and conversations about tech.</p>
-  <a href="mailto:boratetushar46@gmail.com" class="contact-email">boratetushar46@gmail.com</a>
-  <div class="social-row">
-    <a href="www.linkedin.com/in/tushar-borate-ba7a792b6"  class="social-link">LinkedIn</a>
-    <a href="www.github.com/boratetushar46" class="social-link">GitHub</a>
-    <a href="#" class="social-link">Twitter</a>
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label" style="justify-content:center;">04 — Contact</div>
+    </div>
+    <h2 class="contact-big reveal reveal-delay-1">Let's connect<br>&amp; <em>collaborate.</em></h2>
+    <p class="contact-sub reveal reveal-delay-2">Open to internships, projects, collaborations, and conversations about tech.</p>
+    <a href="mailto:boratetushar46@gmail.com" class="contact-email-link reveal reveal-delay-2">boratetushar46@gmail.com</a>
+    <div class="social-row reveal reveal-delay-3">
+      <a href="https://www.linkedin.com/in/tushar-borate-ba7a792b6" class="social-link" id="social-linkedin" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://www.github.com/tusharborate46" class="social-link" id="social-github" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="#" class="social-link" id="social-twitter">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        Twitter
+      </a>
+    </div>
   </div>
 </section>
 
 <footer>
   <span>© 2025 Tushar Borate</span>
   <span>B.Tech · MMCOE Pune</span>
-  <span>Built with WordPress</span>
+  <span>Built with <span style="color:var(--accent)">♥</span> &amp; code</span>
 </footer>
 
 <script src="script.js"></script>
